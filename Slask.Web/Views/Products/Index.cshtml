@@ -1,0 +1,21 @@
+﻿@model List<Slask.Web.Models.ProductModel>
+@{
+    ViewBag.Title = "Users";
+}
+
+<h2>Products</h2>
+
+<table class="table">
+    <tr>
+        <th>Product name</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+        </tr>
+    }
+</table>

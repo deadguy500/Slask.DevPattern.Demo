@@ -1,0 +1,33 @@
+﻿@model List<Slask.Web.Models.UserModel>
+@{
+    ViewBag.Title = "Users";
+}
+
+<h2>Users</h2>
+
+<p>
+    @Html.ActionLink("Add user", "Add")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Fullname</th>
+        <th>Inspect</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.ActionLink("Inspect", "Inspect", new { id = item.Id })
+            </td>
+        </tr>
+    }
+</table>
