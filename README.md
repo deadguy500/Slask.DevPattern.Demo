@@ -1,2 +1,2 @@
 # Slask.DevPattern.Demo
-Domain/Repository pattern demonstation.
+Domain/Repository pattern demonstration.
